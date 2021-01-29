@@ -48,6 +48,7 @@ async function getPage(): Promise<Page> {
 export async function getScreenshot(url: string, { width, height } = { width: 852, height: 480 }) {
   const page = await getPage();
 
+  
   await page.goto(`https://${url.replace('http://', '').replace('https://', '')}`);
   await page.waitForTimeout(3000);
   await page.setViewport({ width, height });
