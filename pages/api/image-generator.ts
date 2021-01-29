@@ -51,5 +51,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   
   
   res.setHeader('Content-Type', 'image/png')
+  res.setHeader(
+    'Cache-Control',
+    'public, immutable, no-transform, s-maxage=31536000, max-age=31536000'
+  )
   res.end(file);
 }
