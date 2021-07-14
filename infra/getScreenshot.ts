@@ -45,7 +45,7 @@ async function getPage(): Promise<Page> {
 }
 
 
-export async function getScreenshot(url: string, { width, height } = { width: 852, height: 480 }) {
+export async function getScreenshot(url: string, { width, height } = { width: 1280, height: 720 }) {
   const page = await getPage();
 
 
